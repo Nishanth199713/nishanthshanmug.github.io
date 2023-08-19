@@ -1,0 +1,25 @@
+h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.question-container {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+button {
+  margin: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button.selected {
+  background-color: green;
+}
+
+
+.option-hover {
+  background-color: green;
+}

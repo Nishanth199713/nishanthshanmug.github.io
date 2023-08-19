@@ -1,0 +1,17 @@
+<div *ngIf="quizQuestions.length > 0">
+    <h2>Quiz Maker</h2>
+    <div *ngFor="let question of quizQuestions; let i = index">
+        <div class="question-container">
+            <p [innerHTML]="question.question"></p>
+            <div class="answer-options">
+                <button *ngFor="let answer of shuffledAnswers[i]; let j = index"
+                    [class.selected]="userAnswers[i] === answer"
+                    [class.option-hover]="j === hoveredOptionIndex && i === hoveredQuestionIndex"
+                    (click)="selectAnswer(i, answer)" (mouseenter)="onOptionHover(i, j)" (mouseleave)="onOptionLeave()">
+                    {{ answer }}
+                </button>
+            </div>
+        </div>
+    </div>
+    <button *ngIf="isQuizComplete" (click)="submitQuiz()">Submit Quiz</button>
+</div>

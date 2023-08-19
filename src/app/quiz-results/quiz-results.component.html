@@ -1,0 +1,24 @@
+<h2>Results</h2>
+<div *ngFor="let question of quizQuestions; let i = index">
+    <div class="question-container">
+        <p [innerHTML]="question.question"></p>
+        <div class="answer-options">
+            <button *ngFor="let answer of question.incorrect_answers; let j = index" [ngClass]="{
+                  'correct-answer': isAnswerCorrect(i, question.correct_answer) && answer === question.correct_answer,
+                  'wrong-answer': answer === question.wrong_answer
+                }">
+                {{ answer }}
+            </button>
+            <button [ngClass]="{
+                  'correct-answer': isAnswerCorrect(i, question.correct_answer) && question.correct_answer === question.correct_answer,
+                  'wrong-answer': question.correct_answer === question.wrong_answer
+                }">
+                {{ question.correct_answer }}
+            </button>
+        </div>
+    </div>
+</div>
+<div [ngClass]="getColorClassForScore()">
+    <p>Your Score: {{ score }}/5</p>
+</div>
+<button class="restart-btn" (click)="restartQuiz()">Start New Quiz</button>

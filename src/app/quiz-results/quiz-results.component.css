@@ -1,0 +1,58 @@
+h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.question-container {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.restart-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.red {
+  background-color: red;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.yellow {
+  background-color: yellow;
+  color: black;
+  padding: 10px;
+  text-align: center;
+}
+
+.green {
+  background-color: green;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+
+button {
+  margin: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+
+.wrong-answer {
+  background-color: red;
+
+}
+
+.correct-answer {
+  background-color: green;
+
+}
